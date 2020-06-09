@@ -26,9 +26,8 @@
           </div>
         </template>
         <a-form-item>
-          <a-input
+          <a-input-password
             size="large"
-            type="password"
             @click="handlePasswordInputClick"
             autocomplete="false"
             placeholder="至少6位密码，区分大小写"
@@ -38,9 +37,8 @@
       </a-popover>
 
       <a-form-item>
-        <a-input
+        <a-input-password
           size="large"
-          type="password"
           autocomplete="false"
           placeholder="确认密码"
           v-decorator="['password2', {rules: [{ required: true, message: '至少6位密码，区分大小写' }, { validator: this.handlePasswordCheck }], validateTrigger: ['change', 'blur']}]"
